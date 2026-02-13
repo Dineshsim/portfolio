@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💡MyWeb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        .card-header img {
+            width: 100%;
+            height: 250px;
+            /* Set desired fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio and crop overflow */
+        }
+
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 3px 3px 10px red;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 10px rgb(230, 9, 9);
+        }
+
+        li {
+            text-shadow: 5px 5px 10px red;
+        }
+
+        li:hover {
+
+            transform: scale(1.03);
+        }
+
+        body {
+            background-image: url(https://wallpaperaccess.com/full/1287871.jpg);
+            backdrop-filter: blur(10px);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>this is a simple column in row</p>
+            </div>
+            <div class="col">
+                <p>this is a simple column in row</p>
+            </div>
+            <div class="col">
+                <p>this is a simple column in row</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>this is a simple column in row</p>
+            </div>
+            <div class="col">
+                <p>this is a simple column in row</p>
+            </div>
+            <div class="col">
+                <p>this is a simple column in row</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- 
+    </div> -->
+    <!--  simple blog layout -->
+    <header class="px-3 bg-dark text-white fixed-top pt-2 pb-2">
+        <!--------fixed top is not working because of background image or use sticky-top instead of foxed top-->
+        <div class="row"><!----row should be created-->
+            <div class="col-12 col-md-6"><!----col should be created-->
+                <h1>CAR BLOG🚀</h1>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-start justify-content-md-end">
+                <nav>
+                    <ul class="list-inline mt-2 ">
+                        <li class="list-inline-item "><a href="#" class="text-decoration-none text-white">HOME</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-decoration-none text-white">ABOUT</a></li>
+                        <li class="list-inline-item"><a href="#" class="text-decoration-none text-white">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container pt-4">
+        <h1 class="mb-3 m-4 text-white mt-5"><b>CAR COLLECTIONS:</b></h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 ">
+                <div class="card">
+                    <div class="row">
+                        <div class="card-header col-6 col-sm-12">
+                            <img class="img-fluid img-thumbnail "
+                                src="https://cdn.motor1.com/images/mgl/pbYG3r/s3/2025-bmw-m4-cs.jpg" alt="not here">
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h2>Post Title 1</h2>
+                                <p class="mt-2">Date Feb 15,2024</p>
+                                <p>This is the contant of post ONE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4  mt-2 ">
+                <div class="card">
+                    <div class="row">
+                        <div class="card-header col-6 col-sm-12">
+                            <img class="img-fluid img-thumbnail "
+                                src="https://cdn.motor1.com/images/mgl/G32EVA/s1/manhart-mh4-gtr-ii-basis-bmw-m4-csl.jpg"
+                                alt="not here">
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h2>Post Title 2</h2>
+                                <p class="mt-2">Date Feb 16,2024</p>
+                                <p>This is the contant of post TWO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4  mt-2 ">
+                <div class="card">
+                    <div class="row">
+                        <div class="card-header col-6 col-sm-12 h-100">
+                            <img class="img-fluid img-thumbnail"
+                                src=https://cdn.bimmertoday.de/wp-content/uploads/2024/05/2024-BMW-M4-CS-Riviera-Blau-G82-LCI-01.jpg
+                                alt="not here">
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <h2>Post Title 3</h2>
+                                <p>Date Feb 17,2024</p>
+                                <p>This is contant of the post THREE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4  mt-3 ">
+                <div class="card">
+                    <div class="row">
+                        <div class="card-header col-6 col-sm-12">
+                            <img class="img-fluid img-thumbnail "
+                                src="https://cdn.motor1.com/images/mgl/BX2Lgv/s4/bmw-m4-csl-racetrack-31.jpg"
+                                alt="not here">
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h2>Post Title 4</h2>
+                                <p class="mt-2">Date Feb 18,2024</p>
+                                <p>This is the contant of post FOUR</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4  mt-4">
+                <div class="card">
+                    <div class="row">
+                        <div class="card-header col-6 col-sm-12">
+                            <img class="img-fluid img-thumbnail " src="https://i.redd.it/fg7ih0h60ht71.jpg"
+                                alt="not here">
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h2>Post Title 5</h2>
+                                <p class="mt-2">Date Feb 19,2024</p>
+                                <p>This is the contant of post FIVE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4  mt-4 mb-3">
+                <div class="card">
+                    <div class="row">
+                        <div class="card-header col-6 col-sm-12 h-100">
+                            <img class="img-fluid img-thumbnail "
+                                src="https://s3.amazonaws.com/speedhunters-wp-production/wp-content/uploads/2018/02/20031119/SH-M4-4.jpg"
+                                alt="not here">
+                        </div>
+                        <div class="col-6 col-sm-12">
+                            <div class="card-body">
+                                <h2>Post Title 6</h2>
+                                <p class="mt-2">Date Feb 20,2024</p>
+                                <p>This is the contant of post of SIX</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12  bg-white p-3">
+                <h2>Contact Form</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="fname">Cars Name:</label>
+                        <input type="text" id="fname" name="fname" class="form-control"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="sname">Model</label>
+                        <input type="text" id="sname" class="form-control"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="you" class="h1">Personal Details</label><br>
+                        <label for="name">name:</label>
+                        <input type="text" class="form-control"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Contact number:</label>
+                        <input type="number" name="number" id="number" class="form-control"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Enter your email id" class="form-control"><br>
+                    </div>
+                    <div class="form-group">
+                        <label>message</label>
+                        <textarea rows="10" cols="20" class="form-control"></textarea><br>
+                    </div>
+                    <button class="btn bg-dark text-white mt-2 mb-2">submit</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="pt-4 p-3 bg-dark text-white mt-1"><!-----------sticky-bottom can be used-->
+        <div class="row">
+            <div class="col">
+                <p>2025 my blog .rights reserved</p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="text-decoration-none text-white">Terms and
+                            Policies</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-decoration-none text-white">privacy policy</a>
+                    </li>
+                    <li class="list-inline-item"><a href="#" class="text-decoration-none text-white">Sitemap</a></li>
+                </ul>
+            </div>
+            <a class="text-center text-decoration-none text-white" href="portfolio.html">🔙GO BACK</a>
+        </div>
+    </footer>
+</body>
+
+</html>

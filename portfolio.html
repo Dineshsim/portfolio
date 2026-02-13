@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💡MyWeb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .card-header img {
+            width: 100%;
+            height: 250px;
+            /* Set desired fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio and crop overflow */
+        }
+
+        .bg-dark {
+            background-color: #000000 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active,
+        .navbar-dark .navbar-nav .show>.nav-link {
+            color: red;
+        }
+
+        body {
+            background-image: linear-gradient(#0F172A);
+        }
+
+        .card-body {
+            color: rgb(0, 0, 0);
+
+        }
+
+        /* footer {
+            color: white;
+        } */
+
+        button {
+            box-shadow: 3px 3px 5px rgb(226, 0, 0);
+        }
+
+        button:hover {
+            box-shadow: 5px 5px 10px black;
+        }
+
+        a {
+            color: #010305;
+            text-decoration: none;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        a:hover {
+            color: whitesmoke;
+        }
+
+        .card {
+            background-image: linear-gradient(rgb(22, 21, 21), rgb(242, 237, 237));
+            box-shadow: 5px 5px 10px black;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar-dark .navbar-brand {
+            color: #fff;
+            text-shadow: 3px 3px 5px red;
+        }
+
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        img {
+            box-shadow: 3px 3px 10px black;
+        }
+
+        footer {
+            color: rgb(222, 10, 10);
+        }
+
+    </style>
+</head>
+
+<body class="mb-5">
+    <header class=" mt-1 mb-4 ">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+            <div class="container pt-2 pb-2">
+                <a class="navbar-brand" href="#">PORTFOLIO</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navsidebar"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navsidebar">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item"><a class="nav-link " href="home.html"><i
+                                    class="bi bi-house-door-fill"></i>Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"> About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="project.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div class="row ms-2 me-2 d-flex gap">
+                <div class="col-lg-4 col-12">
+                    <div class="card h-100">
+                        <div class="card-header mt-2">
+                            <img src="https://templatemag.com/wp-content/uploads/procar-automotive-cars-website-template.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">BLOG PAGE</h2>
+                            <p class="text-center">Designed and developed a responsive Blog Page using HTML, CSS, and
+                                Bootstrap, showcasing
+                                structured content layout with optimized image handling and interactive navigation.</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-danger  mt-1 "><a href="blog.html">VIEW</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card h-100">
+                        <div class="card-header mt-2">
+                            <img src="https://file.mockplus.com/image/2017/09/d00d8670-1604-44cd-9f41-dc213a70f217.png"
+                                alt="fxcg" style="width: 180;height: 306;">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">TASK MANAGER</h2>
+                            <p class="text-center">Built a dynamic Task Manager web application that allows users to
+                                add, edit, and track
+                                tasks efficiently using HTML, CSS, JavaScript, and Bootstrap.</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-danger mt-4"><a href="taskmanager.html">VIEW</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card h-100">
+                        <div class="card-header mt-2">
+                            <img src="https://i.ytimg.com/vi/KWuZdD1aDPo/maxresdefault.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">LANDING PAGE</h2>
+                            <p class="text-center">Created a visually appealing and responsive Landing Page using HTML,
+                                CSS, and Bootstrap,
+                                designed to attract users with clear calls-to-action and modern UI elements.</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-danger mt-2"><a href="project.html">VIEW</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container section2">
+            <div class="row ms-2 me-2 d-flex  gap">
+                <div class="col-lg-4 col-12">
+                    <div class="card h-100 mt-4">
+                        <div class="card-header mt-2">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.g600CcIIAJZET8-c0s39AwHaEK?pid=Api&P=0&h=180"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="text-center mb-3">MINI CALCULATOR</h2>
+                            <p class="text-center">Developed a mini calculator using HTML, CSS, and JavaScript that
+                                performs basic arithmetic operations such as addition, subtraction, multiplication, and
+                                division. The project focuses on clean UI design, user-friendly interaction, and
+                                efficient JavaScript logic for real-time calculations.</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-danger mt-2"><a href="calc.html">VIEW</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div>
+        </section>
+    </main>
+    <div class="mt-5">
+        <footer class="d-flex justify-content-center mt-3">
+            <p style="color: white;">Explore more projects for collaboration opportunities.🌟</p>
+        </footer>
+        <footer class="navbar-nav ms-4 ">
+            <div class="mt-2">
+                <nav style="--bs-breadcrumb-divider:'>'; ">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item disabled">HOME</li>
+                        <LI class="breadcrumb-item dusabled">ABOUT</LI>
+                        <li class="breadcrumb-item active" style="color: whitesmoke;">PORTFOLIO</li>
+                    </ol>
+                </nav>
+                <!-- <div class="d-flex justify-content-end">
+                <p>Explore more projects for collaboration opportunities.🌟</p>
+            </div> -->
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

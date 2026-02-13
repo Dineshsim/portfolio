@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Calculator</title>
+  <link rel="icon" href="calcimage.jpg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #020101;
+      overflow: hidden;
+      cursor: none;
+    }
+
+    .calculator {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 5px 5px 30px white;
+      background-image: url("image.png");
+      outline: 2px solid black;
+    }
+
+    input {
+      width: 93%;
+      height: 50px;
+      font-size: 22px;
+      text-align: right;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+      border: 5px solid black;
+    }
+
+    .keys {
+      display: grid;
+      grid-template-columns: repeat(4, 70px);
+      gap: 10px;
+    }
+
+    button {
+      height: 60px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #444;
+      color: white;
+      transition: 0.3s;
+      box-shadow: 5px 3px 3px black;
+    }
+
+    button:hover {
+      background: #666;
+    }
+
+    .equal {
+      background: orange;
+    }
+
+    .clear {
+      background: red;
+    }
+
+
+
+    .box {
+      position: fixed;
+      border: 5px solid black;
+      border-bottom: 10px solid red;
+      height: 200px;
+      border-radius: 50%;
+      width: 200px;
+      background-color: red;
+      transition: 1s;
+      animation: pri 4s infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 5px 8px white;
+      z-index: 1;
+    }
+
+    @keyframes pri {
+      from {
+        background-color: rgb(1, 0, 0);
+        transform: rotate(0deg);
+        transform: translateY(200px);
+      }
+
+      to {
+        background-image: linear-gradient(black, red);
+        transform: rotate(360deg);
+        transform: translateY(-100px);
+      }
+    }
+
+
+    P {
+      color: white;
+    }
+
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: rgba(250, 11, 7, 0.8);
+      box-shadow:
+        0 0 10px rgb(255, 17, 0),
+        0 0 20px rgb(255, 64, 0),
+        0 0 40px rgb(255, 70, 63),
+        0 0 80px rgb(235, 21, 10);
+      /* transform: translate(-50%, -50%); */
+      /* transition: transform 0.05s linear; */
+      z-index: 9999;
+    }
+
+    /* Small glowing particles for trail */
+    .trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #0ff;
+      pointer-events: none;
+      opacity: 0.8;
+      box-shadow:
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff;
+      transform: translate(-50%, -50%);
+      animation: fadeOut 0.8s linear forwards;
+      z-index: 9999;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+    .heading{
+      color: white;
+      margin-right: 10%;
+      font-size: 30px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-shadow: 10px 10px 10px red;
+      animation: circle 3s infinite;
+    }
+    @keyframes circle{
+      from{
+        transform: rotate3d(0, 1, 0, 0deg);
+      }
+      to{
+        transform: rotate3d(0, 1, 0, 360deg);
+      }
+    }
+    .button{
+      margin-left: 30px;
+      box-shadow: 5px 5px 8px white;
+    }
+    .a{
+      text-decoration: none;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <div class="heading">
+    <h1>CALCULATOR</h1>
+  </div>
+
+
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="keys">
+      <button onclick="pres('7')">7</button>
+      <button onclick="pres('8')">8</button>
+      <button onclick="pres('9')">9</button>
+      <button onclick="pres('/')">÷</button>
+
+      <button onclick="pres('4')">4</button>
+      <button onclick="pres('5')">5</button>
+      <button onclick="pres('6')">6</button>
+      <button onclick="pres('*')">×</button>
+
+      <button onclick="pres('1')">1</button>
+      <button onclick="pres('2')">2</button>
+      <button onclick="pres('3')">3</button>
+      <button onclick="pres('-')">−</button>
+
+      <button onclick="pres('0')">0</button>
+      <button onclick="pres('.')">.</button>
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button onclick="pres('+')">+</button>
+
+      <button class="equal" style="grid-column: span 4;" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <div class="button">
+    <button><a href="portfolio.html" class="a">GO BACK</a></button>
+  </div>
+
+  <script>
+    let display = document.getElementById("display");
+
+    // Function to display pressed key
+    function pres(key) {
+      display.value += key;
+    }
+
+    // Function to clear display
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    // Function to calculate result
+    function calculate() {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = "Error";
+      }
+    }
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+      // Move main neon cursor
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+
+      // Create glowing trail
+      const trail = document.createElement('div');
+      trail.classList.add('trail');
+      trail.style.left = `${e.clientX}px`;
+      trail.style.top = `${e.clientY}px`;
+      document.body.appendChild(trail);
+
+      // Remove trail after animation ends
+      setTimeout(() => {
+        trail.remove();
+      }, 800);
+    });
+  </script>
+
+</body>
+
+</html>

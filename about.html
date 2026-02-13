@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💡MyWeb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <style>
+        header {
+            background-color: black;
+            padding: 10px;
+        }
+
+        body {
+            background-image: linear-gradient(#0F172A, black);
+        }
+
+        .row {
+            border: solid;
+            box-shadow: 3px 3px 20px black;
+        }
+
+        button {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .col-lg-4 {
+            position: relative;
+            height: 400px;
+            box-shadow: 3px 3px 10px black;
+        }
+
+        .one,
+        .two,
+        .three {
+            position: absolute;
+            left: 20%;
+        }
+
+        .four {
+            position: absolute;
+            left: 20%;
+        }
+
+        .five {
+            position: absolute;
+            left: 20%;
+        }
+
+        .one {
+            top: 20%;
+        }
+
+        .two {
+            top: 35%;
+        }
+
+        .three {
+            top: 50%;
+        }
+
+        .four {
+            top: 65%;
+        }
+
+        .five {
+            top: 85%;
+        }
+
+        .col-lg-8 {
+            height: 400px;
+            overflow: hidden;
+            border-left: 1px solid #ccc;
+            position: relative;
+            box-shadow: 3px 3px 10px black;
+        }
+
+        .content-panel {
+            display: none;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .content-panel.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 4px 4px 15px black;
+        }
+
+        h1 {
+            text-shadow: 3px 3px 5px rgb(0, 0, 0);
+
+        }
+
+        h1:hover {
+            transform: scale(1.03);
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: 3px 3px 10px black;
+            color: rgb(236, 220, 220);
+        }
+
+        .nav-link {
+            color: wheat;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .nav-link:hover {
+            color: red;
+        }
+
+        li.breadcrumb-item {
+            color: #e10e0e;
+        }
+
+        li.breadcrumb-item.active {
+            color: #efecec;
+        }
+
+        a.navbar-brand {
+            text-shadow: 3px 3px 6px rgb(236, 4, 4);
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active,
+        .navbar-dark .navbar-nav .show>.nav-link {
+            color: red;
+        }
+
+        .bg-dark {
+            background-color: black !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" mt-2 mb-4 PT-2 ">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="#">ABOUT EDUCATION</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navsidebar"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navsidebar">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item"><a class="nav-link " href="home.html"><i
+                                    class="bi bi-house-door-fill"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html"> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="project.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- <header class="mt-1">
+        <nav class="navbar navbar-dark navbar-expand">
+            <div class="container">
+                <h1 class="navbar-brand fw-bolder" style="text-shadow: 3px 3px 5px red;">ABOUT MYSELF</h1>
+                <div>
+                    <ul class="navbar-nav text-white flex-row">
+                        <li class="nav-item">
+                            <a href="https://github.com/signup" class="nav-link"><i class="bi bi-github ms-2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://in.linkedin.com/" class="nav-link"><i class="bi bi-linkedin ms-2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.instagram.com/" class="nav-link"><i
+                                    class="bi bi-instagram ms-2"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="bi bi-share ms-2"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+
+    <main class="container mb-3">
+        <h5 class="mt-2 text-center" style="color: aliceblue; text-shadow: 5px 5px 10px black;">------&rarr;EDUCATION🎓
+        </h5>
+        <h1 class=" text-center mt-2 text-light">ABOUT EDUCATION AND SKILLS</h1>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <!-- LEFT BUTTONS -->
+                    <div class="col-lg-4" style="background-image: linear-gradient(red,rgb(200, 182, 182));">
+                        <button class="one btn btn-dark rounded-pill" onclick="showPanel('panel1')">UG
+                        </button><br />
+                        <button class="two btn btn-dark rounded-pill" onclick="showPanel('panel2')">.NET INTERN/COURCE
+                        </button><br />
+                        <button class="three btn btn-dark rounded-pill" onclick="showPanel('panel3')">FINAL YEAR
+                            PROJECT</button>
+                        <button class="four btn btn-dark rounded-pill" onclick="showPanel('panel4')">WORKSHOPS AND
+                            CERTIFICATES</button>
+                        <button class="five btn btn-dark rounded-pill" onclick="showPanel('panel5')">INTERN PROJECT
+                        </button>
+                    </div>
+
+                    <!-- RIGHT CONTENT (FIXED SIZE) -->
+                    <div class="col-lg-8" style="background-image: linear-gradient(180deg,red,rgb(200, 182, 182));">
+                        <div id="panel1" class="content-panel">
+                            <div class="text-light">
+                                <h2>SREE RANGANATHAR INSTITUTE OF ENGINEERING AND TECHNOLOGY</h2>
+                                <h3>COURSE: B.E CSE</h3>
+                                <h4><i>[ Completed the degree with CGPA: 7.9% ]</i></h4>
+                            </div>
+                        </div>
+                        <div id="panel2" class="content-panel">
+                            <div class="text-light">
+                                <h2>ABOUT COURCE</h2>
+                                <p style="color: black;"><b> I am currently pursuing a .NET Full Stack Development
+                                        internship at Pumotecnovation,
+                                        where I am gaining hands-on experience in building web applications using C#,
+                                        ASP.NET, SQL Server, HTML, CSS, Bootstrap, JavaScript, and React. During this
+                                        internship, I am involved in developing user-friendly interfaces, implementing
+                                        backend logic, and working with databases. This experience is helping me
+                                        strengthen
+                                        my full-stack development skills and understand real-world software development
+                                        practices.</b></p>
+                            </div>
+                        </div>
+                        <div id="panel3" class="content-panel">
+                            <div class="text-light">
+                                <h2>HEART DISEASE PREDICTION SYSTEM</h2>
+                                <P style="color: black;"><b>Developed a machine learning–based system to predict the
+                                        risk of heart disease using
+                                        patient health parameters such as
+                                        age, blood pressure, cholesterol level, heart rate, and other medical data. The
+                                        system processes patient inputs, analyzes
+                                        the data using trained ML models, and classifies the risk as high or low,
+                                        supporting
+                                        early detection and assisting doctors
+                                        in decision-making. This project provided hands-on experience in data
+                                        preprocessing,
+                                        model training, and application
+                                        development, while strengthening problem-solving skills and understanding of
+                                        real-world healthcare applications.</b></P>
+                            </div>
+                        </div>
+                        <div id="panel4" class="content-panel">
+                            <div class="text-light">
+                                <h2>CERTIFICATES</h2>
+                                <p><b style="color: black;">🌟Python Programming Language </b>– Sri Sakthi Academy, Coimbatore</p>
+                                <p><b style="color: black;">🌟Python with AI & Data Analytics Internship</b> – Gained hands-on experience in Python
+                                    programming.</p>
+                                <p><b style="color: black;">🌟UI/UX Design & Video Editing Workshop </b>– Developed practical skills in user interface
+                                    design and multimedia editing</p>
+                                <p><b style="color: black;">🌟Adobe Photoshop Workshop </b>– Organized by LET’S GAMETECH; acquired image editing and
+                                    design expertise</p>
+                                <p><b style="color: black;">🌟Game Development Workshop</b> – Organized by LET’S GAMETECH; learned fundamentals of
+                                    game design and
+                                    development</p>
+                            </div>
+                        </div>
+                        <div id="panel5" class="content-panel">
+                            <div class="text-light">
+                                <h2>Dashboard Application – Internship Project</h2>
+                                <P style="color: black;"><b>Developed a responsive dashboard interface as part of an
+                                        internship at Propel. Implemented user-friendly layouts and
+                                        reusable UI components using HTML and CSS. Enhanced data visualization clarity
+                                        and improved dashboard loading time
+                                        by 20%, ensuring compatibility across devices.
+                                        Developed using HTML, CSS.</b></P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer class="navbar-nav ">
+            <div class="mt-2">
+                <nav style="--bs-breadcrumb-divider:'>'; ">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item disabled">HOME</li>
+                        <LI class="breadcrumb-item active">ABOUT</LI>
+                    </ol>
+                </nav>
+                <div class="d-flex justify-content-end">
+                    <a class="nav-link " href="portfolio.html">NEXT---------&rarr;</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+    <script>
+        function showPanel(id) {
+            document.querySelectorAll('.content-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
